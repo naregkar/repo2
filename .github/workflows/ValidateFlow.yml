@@ -29,7 +29,7 @@ jobs:
                 cd .github
                 cat /dev/null > version
 
-                echo 'Growth V2' >> version
+                echo 'V2' >> version
 
                 git add version
                 git diff-index --quiet HEAD || git commit -m 'Updating the file version from Jira Issue'
