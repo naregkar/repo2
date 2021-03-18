@@ -33,5 +33,5 @@ jobs:
 
                 git add version
                 git diff-index --quiet HEAD || git commit -m 'Updating the file version from Jira Issue'
-                #git push origin "${{ env.PR_Branch_Name }}"
+                git push origin "${{ env.PR_Branch_Name }}"
                 
