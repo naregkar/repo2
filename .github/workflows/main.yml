@@ -27,9 +27,9 @@ jobs:
                 
               echo $restApiPRTitle
               
-              #if [[ $restApiPRTitle =~ ^\[DT-[0-9]+\] ]]; then
-              #  echo 'PR Title is in correct format.'
-              #else
-              #  echo 'PR Title does not comply with the required pattern.'                  
-              #    exit 1
-              #fi
+              if [[ $restApiPRTitle =~ ^\[DT-[0-9]+\] ]]; then
+                echo 'PR Title is in correct format.'
+              else
+                echo 'PR Title does not comply with the required pattern.'                  
+                  exit 1
+              fi
