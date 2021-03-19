@@ -1,0 +1,14 @@
+name: 'Auto Label'
+on: 
+  pull_request:
+    branches: 
+      - master
+  
+jobs:
+  add-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@main
+        with:
+          repo-token: "${{ secrets.TOKEN_GITHUB }}"
+          configuration-path: ".github/labeler.yml"
