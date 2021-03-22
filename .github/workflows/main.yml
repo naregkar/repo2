@@ -18,6 +18,7 @@ jobs:
         run: echo "PR_Branch_Name=${{ github.head_ref }}" >> $GITHUB_ENV  
 
       - name: Validate Title
+        if: github.event_name == 'pull_request'
         run: |
               echo PR Numer is: $GITHUB_PR_NUMBER
                 
